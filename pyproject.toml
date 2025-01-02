@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "esa-obs-stats"
+version = "0.1.0"
+description = "Small utility to produce statistics from ADES astrometric observations."
+authors = ["Michaela Honková <honkova84@gmail.com>"]
+readme = "README.md"
+packages = [{include = "esa_obs_stats"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.3"
+xmltodict = "^0.14.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
