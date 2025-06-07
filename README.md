@@ -11,12 +11,14 @@ information:
 
 To generate the statistic,
 1. Clone the repository.
-2. Put the ADES `.xml` files with observations into folder `/obs-data/`.
-3. This project uses `Poetry` for package management.  
-   Complete package versions are specified in `pyproject.toml` file.  
-   When you have poetry installed, go to the directory with .toml file,  
-   and run `poetry install`.
-4. Run `poetry run python main.py`. 
+2. Put the ADES `.xml` files with observations into folder `/obs-data/`
+3. Run the `main.py` using `Poetry` or `Docker`:
+     - `Poetry`: This project uses `Poetry` for package management.  
+        Complete package versions are specified in `pyproject.toml` file.  
+        When you have poetry installed, go to the directory with .toml file,  
+        and run `poetry install`. Then run `poetry run python main.py`  
+     - `Docker`: to build the image, run `docker build -t esa-obsa-stats .`  
+        Then run the app with `docker run --rm -v "$(pwd):/app" esa-obsa-stats`
 
 ## Input
 

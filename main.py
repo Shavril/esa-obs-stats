@@ -7,6 +7,7 @@ import pathlib
 import math
 import csv
 import os
+import sys
 
 
 WORKING_DIR = pathlib.Path(os.path.dirname(os.path.realpath(__file__)))
@@ -113,4 +114,5 @@ if __name__ == "__main__":
     save_result_as_txt(data)
 
     print("Result file was written.")
-    input("Press any key to exit...")
+    if sys.stdin.isatty():
+        input("Press any key to exit...")
